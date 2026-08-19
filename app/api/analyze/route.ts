@@ -1,6 +1,6 @@
 import {NextRequest,NextResponse} from "next/server";
 
-const ALGORITHM="cpsc-issue-extractor/1.0.0";
+const ALGORITHM="cpsc-issue-extractor/1.0.1";
 const TAXONOMY=[
  {label:"Regulatory burden and cost",words:["burden","cost","expense","economic","paperwork","duplicat"]},
  {label:"Consumer safety and risk",words:["safety","risk","hazard","injur","consumer","protect"]},
@@ -9,10 +9,10 @@ const TAXONOMY=[
  {label:"Small entities and market effects",words:["small business","small entit","manufacturer","importer","market"]},
  {label:"Process and implementation",words:["comment","implement","deadline","practice","procedure","report"]},
 ];
-const clean=(s:string)=>s.replace(/<[^>]+>/g," ").replace(/\s+/g," ").trim();
+const clean=(s:string)=>s.replace(/<[^>]+>/g," ").replace(/-{5,}/g," ").replace(/\s+/g," ").trim();
 function extract(text:string,sourceUrl:string){
- const passages=text.split(/(?<=[.!?])\s+/).map(clean).filter(x=>x.length>=70&&x.length<=700);
- return TAXONOMY.map(t=>{const hits=passages.map((p,index)=>({p,index,score:t.words.reduce((n,w)=>n+(p.toLowerCase().includes(w)?1:0),0)})).filter(x=>x.score>0).sort((a,b)=>b.score-a.score||a.index-b.index).slice(0,3);return {issue:t.label,evidenceCount:hits.length,confidence:hits.length>=3?"high":hits.length===2?"moderate":"limited",humanReviewStatus:"unreviewed",evidence:hits.map(x=>({passage:x.p.slice(0,420),sourceUrl,locator:`sentence ${x.index+1}`}))}}).filter(x=>x.evidenceCount>0).sort((a,b)=>b.evidenceCount-a.evidenceCount);
+ const passages=text.split(/(?<=[.!?])\s+/).map(clean).filter(x=>x.length>=70&&x.length<=700&&!/(telephone:|email:|email&#|street address|billing code|agency:|\[cpsc-|docket no\.)/i.test(x));
+ return TAXONOMY.map(t=>{const hits=passages.map((p,index)=>{const scoring=p.toLowerCase().replaceAll("consumer product safety commission","");return {p,index,score:t.words.reduce((n,w)=>n+(scoring.includes(w)?1:0),0)}}).filter(x=>x.score>0).sort((a,b)=>b.score-a.score||a.index-b.index).slice(0,3);return {issue:t.label,evidenceCount:hits.length,confidence:hits.length>=3?"high":hits.length===2?"moderate":"limited",humanReviewStatus:"unreviewed",evidence:hits.map(x=>({passage:x.p.slice(0,420),sourceUrl,locator:`sentence ${x.index+1}`}))}}).filter(x=>x.evidenceCount>0).sort((a,b)=>b.evidenceCount-a.evidenceCount);
 }
 export async function GET(request:NextRequest){
  const frDocNum=(request.nextUrl.searchParams.get("frDocNum")||"").trim(),documentId=(request.nextUrl.searchParams.get("documentId")||"").trim();
