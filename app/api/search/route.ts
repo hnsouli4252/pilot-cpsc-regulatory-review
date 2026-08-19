@@ -19,7 +19,7 @@ async function federalRegisterFallback(query:string,scope:"year"|"all",page:numb
   const details=await Promise.all(base.map(async(item:any)=>{try{const r=await fetch(`https://www.federalregister.gov/api/v1/documents/${encodeURIComponent(item.document_number)}.json`,{headers:{Accept:"application/json","User-Agent":"CPSC-Regulatory-Review-Workspace/1.0"},cache:"no-store",signal:AbortSignal.timeout(8_000)});return r.ok?await r.json():item}catch{return item}}));
   const records=details.map((item:any)=>{const rg=item.regulations_dot_gov_info||{},docketId=rg.docket_id||item.dockets?.[0]?.id||null,documentId=rg.document_id||`FR-${item.document_number}`;return {id:documentId,title:item.title||"Untitled record",docketId,documentType:item.type||"Federal Register document",postedDate:item.publication_date||null,commentEndDate:item.comments_close_on||null,openForComment:Boolean(item.comments_close_on&&new Date(item.comments_close_on)>=retrievedAt),frDocNum:item.document_number||null,regulationsUrl:rg.document_id?`https://www.regulations.gov/document/${encodeURIComponent(rg.document_id)}`:item.html_url,docketUrl:docketId?`https://www.regulations.gov/docket/${encodeURIComponent(docketId)}`:null}});
   const total=ranked.length,totalPages=Math.min(Math.ceil(total/PAGE_SIZE)||1,MAX_PAGE);
-  return {query,agency:"CPSC",scope,source:"FederalRegister.gov API — official fallback after Regulations.gov rate limit/unavailability",retrievedAt:retrievedAt.toISOString(),fromDate,toDate:retrievedAt.toISOString().slice(0,10),page,totalElements:total,totalPages,hasNextPage:page<totalPages,coverageLimit:`The fallback unions up to 1,000 official Federal Register matches for each of the first five query terms, removes duplicates, ranks title-term overlap, and exposes the first ${MAX_PAGE} pages. It covers Federal Register documents, not every Regulations.gov document type.`,records};
+  return {query,agency:"CPSC",scope,source:scope==="all"?"FederalRegister.gov API — official historical search":"FederalRegister.gov API — official fallback after Regulations.gov rate limit/unavailability",retrievedAt:retrievedAt.toISOString(),fromDate,toDate:retrievedAt.toISOString().slice(0,10),page,totalElements:total,totalPages,hasNextPage:page<totalPages,coverageLimit:`The historical/fallback search unions up to 1,000 official Federal Register matches for each of the first five query terms, removes duplicates, ranks title-term overlap, and exposes the first ${MAX_PAGE} pages. It covers Federal Register documents, not every Regulations.gov document type.`,records};
 }
 
 export async function GET(request: NextRequest) {
@@ -50,6 +50,7 @@ export async function GET(request: NextRequest) {
   if (fromDate) params.set("filter[postedDate][ge]", fromDate);
 
   try {
+    if(scope==="all")return NextResponse.json(await federalRegisterFallback(query,scope,page,retrievedAt,fromDate),{headers:{"Cache-Control":"no-store"}});
     const response = await fetch(`https://api.regulations.gov/v4/documents?${params}`, {
       headers: { Accept: "application/vnd.api+json", "User-Agent": "CPSC-Regulatory-Review-Workspace/1.0" },
       cache: "no-store",
