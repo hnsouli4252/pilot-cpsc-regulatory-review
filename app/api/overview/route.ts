@@ -1,11 +1,11 @@
 import { NextRequest, NextResponse } from "next/server";
 
-function threeMonthsAgo(now:Date){const from=new Date(now);from.setUTCMonth(from.getUTCMonth()-3);return from.toISOString().slice(0,10)}
+function twelveMonthsAgo(now:Date){const from=new Date(now);from.setUTCMonth(from.getUTCMonth()-12);return from.toISOString().slice(0,10)}
 const hits=new Map<string,{count:number;reset:number}>();
 export async function GET(request:NextRequest){
  const ip=request.headers.get("cf-connecting-ip")||"unknown",now=Date.now(),bucket=hits.get(ip);
  if(!bucket||bucket.reset<now)hits.set(ip,{count:1,reset:now+60_000});else if(bucket.count>=30)return NextResponse.json({error:"Overview refresh limit reached. Please wait one minute."},{status:429});else bucket.count+=1;
- const retrieved=new Date(),fromDate=threeMonthsAgo(retrieved);
+ const retrieved=new Date(),fromDate=twelveMonthsAgo(retrieved);
  const params=new URLSearchParams({"filter[agencyId]":"CPSC","filter[postedDate][ge]":fromDate,sort:"-postedDate","page[size]":"250",api_key:"DEMO_KEY"});
  try{
   const response=await fetch(`https://api.regulations.gov/v4/documents?${params}`,{headers:{Accept:"application/vnd.api+json","User-Agent":"CPSC-Regulatory-Review-Workspace/1.0"},cache:"no-store",signal:AbortSignal.timeout(12_000)});

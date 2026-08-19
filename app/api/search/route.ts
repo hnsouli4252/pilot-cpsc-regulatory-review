@@ -4,9 +4,9 @@ const hits = new Map<string, { count: number; reset: number }>();
 const MAX_PAGE = 5;
 const PAGE_SIZE = 20;
 
-function threeMonthsAgo(now: Date) {
+function twelveMonthsAgo(now: Date) {
   const from = new Date(now);
-  from.setUTCMonth(from.getUTCMonth() - 3);
+  from.setUTCMonth(from.getUTCMonth() - 12);
   return from.toISOString().slice(0, 10);
 }
 
@@ -19,22 +19,23 @@ export async function GET(request: NextRequest) {
   else bucket.count += 1;
 
   const query = (request.nextUrl.searchParams.get("q") || "").trim().replace(/\s+/g, " ");
+  const scope = request.nextUrl.searchParams.get("scope") === "all" ? "all" : "year";
   const page = Math.min(MAX_PAGE, Math.max(1, Number(request.nextUrl.searchParams.get("page")) || 1));
   if (query.length < 2 || query.length > 80 || /[<>\u0000-\u001F]/.test(query)) {
     return NextResponse.json({ error: "Enter 2–80 plain-text characters." }, { status: 400 });
   }
 
   const retrievedAt = new Date();
-  const fromDate = threeMonthsAgo(retrievedAt);
+  const fromDate = scope === "year" ? twelveMonthsAgo(retrievedAt) : null;
   const params = new URLSearchParams({
     "filter[searchTerm]": query,
     "filter[agencyId]": "CPSC",
-    "filter[postedDate][ge]": fromDate,
-    sort: "-postedDate",
     "page[number]": String(page),
     "page[size]": String(PAGE_SIZE),
     api_key: "DEMO_KEY",
   });
+  if (scope === "year") params.set("sort", "-postedDate");
+  if (fromDate) params.set("filter[postedDate][ge]", fromDate);
 
   try {
     const response = await fetch(`https://api.regulations.gov/v4/documents?${params}`, {
@@ -58,7 +59,7 @@ export async function GET(request: NextRequest) {
     }));
     const meta = payload.meta || {};
     return NextResponse.json({
-      query, agency: "CPSC", source: "Regulations.gov API v4 — documents endpoint",
+      query, agency: "CPSC", scope, source: "Regulations.gov API v4 — documents endpoint",
       retrievedAt: retrievedAt.toISOString(), fromDate, toDate: retrievedAt.toISOString().slice(0, 10),
       page: meta.pageNumber || page, pageSize: meta.pageSize || PAGE_SIZE,
       totalElements: meta.totalElements ?? records.length, totalPages: Math.min(meta.totalPages || 1, MAX_PAGE),
@@ -66,6 +67,6 @@ export async function GET(request: NextRequest) {
       records,
     }, { headers: { "Cache-Control": "no-store" } });
   } catch {
-    return NextResponse.json({ error: "The official Regulations.gov service did not respond. No cached or demo results were substituted.", source: "Regulations.gov API v4", fromDate, retrievedAt: retrievedAt.toISOString() }, { status: 502 });
+    return NextResponse.json({ error: "The official Regulations.gov service did not respond. No cached results were substituted.", source: "Regulations.gov API v4", fromDate, retrievedAt: retrievedAt.toISOString() }, { status: 502 });
   }
 }
