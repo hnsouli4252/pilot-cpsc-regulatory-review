@@ -7,9 +7,12 @@ const root=new URL("../",import.meta.url);
 test("uses uncapped progressive detail batches before deriving aggregates",async()=>{
  const api=await readFile(new URL("app/api/analyze/route.ts",root),"utf8");
  assert.match(api,/LISTING_PAGE_SIZE=250/);
+ assert.match(api,/DETAIL_CONCURRENCY=4/);
+ assert.doesNotMatch(api,/DETAIL_CONCURRENCY=(?:[6-9]|[1-9][0-9]+)/);
  assert.match(api,/batch=nonWithdrawn\.slice\(detailOffset,detailOffset\+detailBatchSize\)/);
  assert.match(api,/hasMore=nextOffset<nonWithdrawn\.length/);
  assert.match(api,/listingOnly\?\[\]:await getDetails/);
+ assert.match(api,/listingOnly=request\.nextUrl\.searchParams\.get\("listingOnly"\)==="1"\|\|!hasExplicitOffset/);
  assert.match(api,/getJson\([^\n]+,false\)/);
  assert.match(api,/Other \/ no theme match/);
  assert.match(api,/domainAggregation=/);
