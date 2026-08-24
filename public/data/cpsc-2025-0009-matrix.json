@@ -1,0 +1,819 @@
+{
+  "documentId": "CPSC-2025-0009-0001",
+  "docketId": "CPSC-2025-0009",
+  "retrievedAt": "2026-08-24T15:48:25.976Z",
+  "source": "Regulations.gov API v4 — committed official docket snapshot",
+  "credentialMode": "shared_public_demo_key",
+  "algorithm": "cpsc-comment-issue-matrix/2.3.0",
+  "hazardTaxonomyVersion": "cpsc-comment-hazard-domains/2.0.0",
+  "method": "One-time official retrieval committed with the application. Issue groups and hazard domains are assigned per cached comment; aggregates are calculated afterward.",
+  "totalCommentsReported": 31,
+  "commentsListed": 31,
+  "totalNonWithdrawn": 31,
+  "listingComplete": true,
+  "detailOffset": 30,
+  "detailBatchSize": 30,
+  "nextOffset": 31,
+  "hasMore": false,
+  "commentsDetailed": 31,
+  "detailRetrievedCount": 18,
+  "detailUnavailableCount": 13,
+  "detailRateLimitedCount": 1,
+  "textAvailableCount": 18,
+  "submitterUnavailableCount": 1,
+  "unclassifiedTextComments": 0,
+  "themes": [
+    {
+      "theme": "Regulatory burden and cost",
+      "count": 14,
+      "commentIds": [
+        "CPSC-2025-0009-0032",
+        "CPSC-2025-0009-0021",
+        "CPSC-2025-0009-0020",
+        "CPSC-2025-0009-0029",
+        "CPSC-2025-0009-0022",
+        "CPSC-2025-0009-0028",
+        "CPSC-2025-0009-0023",
+        "CPSC-2025-0009-0031",
+        "CPSC-2025-0009-0019",
+        "CPSC-2025-0009-0027",
+        "CPSC-2025-0009-0013",
+        "CPSC-2025-0009-0015",
+        "CPSC-2025-0009-0014",
+        "CPSC-2025-0009-0005"
+      ],
+      "humanReviewStatus": "unreviewed"
+    },
+    {
+      "theme": "Consumer safety and risk",
+      "count": 5,
+      "commentIds": [
+        "CPSC-2025-0009-0030",
+        "CPSC-2025-0009-0020",
+        "CPSC-2025-0009-0028",
+        "CPSC-2025-0009-0027",
+        "CPSC-2025-0009-0013"
+      ],
+      "humanReviewStatus": "unreviewed"
+    },
+    {
+      "theme": "Small entities and market effects",
+      "count": 3,
+      "commentIds": [
+        "CPSC-2025-0009-0026",
+        "CPSC-2025-0009-0028",
+        "CPSC-2025-0009-0017"
+      ],
+      "humanReviewStatus": "unreviewed"
+    },
+    {
+      "theme": "Compliance, testing, and certification",
+      "count": 2,
+      "commentIds": [
+        "CPSC-2025-0009-0028",
+        "CPSC-2025-0009-0027"
+      ],
+      "humanReviewStatus": "unreviewed"
+    },
+    {
+      "theme": "Innovation, competition, and consumer choice",
+      "count": 2,
+      "commentIds": [
+        "CPSC-2025-0009-0010",
+        "CPSC-2025-0009-0012"
+      ],
+      "humanReviewStatus": "unreviewed"
+    },
+    {
+      "theme": "Evidence and data",
+      "count": 1,
+      "commentIds": [
+        "CPSC-2025-0009-0024"
+      ],
+      "humanReviewStatus": "unreviewed"
+    },
+    {
+      "theme": "Other / no theme match",
+      "count": 11,
+      "commentIds": [
+        "CPSC-2025-0009-0025",
+        "CPSC-2025-0009-0018",
+        "CPSC-2025-0009-0016",
+        "CPSC-2025-0009-0011",
+        "CPSC-2025-0009-0009",
+        "CPSC-2025-0009-0007",
+        "CPSC-2025-0009-0003",
+        "CPSC-2025-0009-0008",
+        "CPSC-2025-0009-0004",
+        "CPSC-2025-0009-0006",
+        "CPSC-2025-0009-0002"
+      ],
+      "humanReviewStatus": "unreviewed"
+    }
+  ],
+  "domainAggregation": [
+    {
+      "domain": "Unclear/Needs review",
+      "count": 31
+    }
+  ],
+  "comments": [
+    {
+      "id": "CPSC-2025-0009-0032",
+      "postedDate": "2025-09-04T04:00:00Z",
+      "title": "Office of Advocacy Comments Docket No CPSC-2025-0009",
+      "submitterName": null,
+      "organization": null,
+      "submitterAvailability": "unavailable_or_redacted",
+      "textAvailable": true,
+      "textStatus": "available",
+      "summary": "Office of Advocacy Comments Docket No CPSC-2025-0009. The cached record does not contain enough text to summarize the request or concern.",
+      "excerpt": "See Attached",
+      "sourceUrl": "https://www.regulations.gov/comment/CPSC-2025-0009-0032",
+      "detailRetrieved": true,
+      "detailStatus": null,
+      "themeTags": [
+        "Regulatory burden and cost"
+      ],
+      "hazardTags": [
+        "Unclear/Needs review"
+      ],
+      "hazardBasis": []
+    },
+    {
+      "id": "CPSC-2025-0009-0026",
+      "postedDate": "2025-08-14T04:00:00Z",
+      "title": "Comment from National Association of Manufacturers",
+      "submitterName": null,
+      "organization": "National Association of Manufacturers",
+      "submitterAvailability": "published",
+      "textAvailable": true,
+      "textStatus": "available",
+      "summary": "The cached record does not contain enough substantive text to determine the commenter’s request or concern.",
+      "excerpt": "Comment letter attached as pdf.",
+      "sourceUrl": "https://www.regulations.gov/comment/CPSC-2025-0009-0026",
+      "detailRetrieved": true,
+      "detailStatus": null,
+      "themeTags": [
+        "Small entities and market effects"
+      ],
+      "hazardTags": [
+        "Unclear/Needs review"
+      ],
+      "hazardBasis": []
+    },
+    {
+      "id": "CPSC-2025-0009-0030",
+      "postedDate": "2025-08-14T04:00:00Z",
+      "title": "Comment from Baby Safety Alliance (formerly JPMA)",
+      "submitterName": null,
+      "organization": "Baby Safety Alliance (formerly JPMA)",
+      "submitterAvailability": "published",
+      "textAvailable": true,
+      "textStatus": "available",
+      "summary": "The cached record does not contain enough substantive text to determine the commenter’s request or concern.",
+      "excerpt": "Please see attached",
+      "sourceUrl": "https://www.regulations.gov/comment/CPSC-2025-0009-0030",
+      "detailRetrieved": true,
+      "detailStatus": null,
+      "themeTags": [
+        "Consumer safety and risk"
+      ],
+      "hazardTags": [
+        "Unclear/Needs review"
+      ],
+      "hazardBasis": []
+    },
+    {
+      "id": "CPSC-2025-0009-0021",
+      "postedDate": "2025-08-14T04:00:00Z",
+      "title": "Comment from Household & Commercial Products Association",
+      "submitterName": null,
+      "organization": "Household & Commercial Products Association",
+      "submitterAvailability": "published",
+      "textAvailable": true,
+      "textStatus": "available",
+      "summary": "The Household &amp; Commercial Products Association (HCPA) appreciates the opportunity to provide the attached letter.",
+      "excerpt": "The Household &amp; Commercial Products Association (HCPA) appreciates the opportunity to provide the attached letter.",
+      "sourceUrl": "https://www.regulations.gov/comment/CPSC-2025-0009-0021",
+      "detailRetrieved": true,
+      "detailStatus": null,
+      "themeTags": [
+        "Regulatory burden and cost"
+      ],
+      "hazardTags": [
+        "Unclear/Needs review"
+      ],
+      "hazardBasis": []
+    },
+    {
+      "id": "CPSC-2025-0009-0020",
+      "postedDate": "2025-08-14T04:00:00Z",
+      "title": "Comment from Retail Industry Leaders Association (RILA)",
+      "submitterName": null,
+      "organization": "Retail Industry Leaders Association (RILA)",
+      "submitterAvailability": "published",
+      "textAvailable": true,
+      "textStatus": "available",
+      "summary": "Consumer Product Safety Commission&rsquo;s Request for Information (RFI) on reducing regulatory burdens.",
+      "excerpt": "The Retail Industry Leaders Association appreciates the opportunity to submit the attached written comments on the U.S. Consumer Product Safety Commission&rsquo;s Request for Information (RFI) on reducing regulatory burdens.",
+      "sourceUrl": "https://www.regulations.gov/comment/CPSC-2025-0009-0020",
+      "detailRetrieved": true,
+      "detailStatus": null,
+      "themeTags": [
+        "Regulatory burden and cost",
+        "Consumer safety and risk"
+      ],
+      "hazardTags": [
+        "Unclear/Needs review"
+      ],
+      "hazardBasis": []
+    },
+    {
+      "id": "CPSC-2025-0009-0029",
+      "postedDate": "2025-08-14T04:00:00Z",
+      "title": "Comment from Lauren Hellendall",
+      "submitterName": "Lauren Hellendall",
+      "organization": null,
+      "submitterAvailability": "published",
+      "textAvailable": true,
+      "textStatus": "available",
+      "summary": "The cached record does not contain enough substantive text to determine the commenter’s request or concern.",
+      "excerpt": "See attached file(s)",
+      "sourceUrl": "https://www.regulations.gov/comment/CPSC-2025-0009-0029",
+      "detailRetrieved": true,
+      "detailStatus": null,
+      "themeTags": [
+        "Regulatory burden and cost"
+      ],
+      "hazardTags": [
+        "Unclear/Needs review"
+      ],
+      "hazardBasis": []
+    },
+    {
+      "id": "CPSC-2025-0009-0024",
+      "postedDate": "2025-08-14T04:00:00Z",
+      "title": "Comment from Consumer Federation of America",
+      "submitterName": null,
+      "organization": "Consumer Federation of America",
+      "submitterAvailability": "published",
+      "textAvailable": true,
+      "textStatus": "available",
+      "summary": "CPSC-2025-0009 from Consumer Federation of America, Consumer Reports, National Center for Health Research, American Academy of Pediatrics, and Safe Infant Sleep.",
+      "excerpt": "Please see that attached document in response to docket no. CPSC-2025-0009 from Consumer Federation of America, Consumer Reports, National Center for Health Research, American Academy of Pediatrics, and Safe Infant Sleep.",
+      "sourceUrl": "https://www.regulations.gov/comment/CPSC-2025-0009-0024",
+      "detailRetrieved": true,
+      "detailStatus": null,
+      "themeTags": [
+        "Evidence and data"
+      ],
+      "hazardTags": [
+        "Unclear/Needs review"
+      ],
+      "hazardBasis": []
+    },
+    {
+      "id": "CPSC-2025-0009-0022",
+      "postedDate": "2025-08-14T04:00:00Z",
+      "title": "Comment from AHAM",
+      "submitterName": null,
+      "organization": "AHAM",
+      "submitterAvailability": "published",
+      "textAvailable": true,
+      "textStatus": "available",
+      "summary": "The cached record does not contain enough substantive text to determine the commenter’s request or concern.",
+      "excerpt": "Please see the attached comments from AHAM.",
+      "sourceUrl": "https://www.regulations.gov/comment/CPSC-2025-0009-0022",
+      "detailRetrieved": true,
+      "detailStatus": null,
+      "themeTags": [
+        "Regulatory burden and cost"
+      ],
+      "hazardTags": [
+        "Unclear/Needs review"
+      ],
+      "hazardBasis": []
+    },
+    {
+      "id": "CPSC-2025-0009-0028",
+      "postedDate": "2025-08-14T04:00:00Z",
+      "title": "Comment from Portable Generator Manufacturers' Association",
+      "submitterName": null,
+      "organization": "Portable Generator Manufacturers' Association",
+      "submitterAvailability": "published",
+      "textAvailable": true,
+      "textStatus": "available",
+      "summary": "The cached record does not contain enough substantive text to determine the commenter’s request or concern.",
+      "excerpt": "Please see the attached comments from the Portable Generator Manufacturers&#39; Association on the regulatory burdens associated with the CPSC&#39;s proposed safety standard on portable generators.",
+      "sourceUrl": "https://www.regulations.gov/comment/CPSC-2025-0009-0028",
+      "detailRetrieved": true,
+      "detailStatus": null,
+      "themeTags": [
+        "Regulatory burden and cost",
+        "Consumer safety and risk",
+        "Compliance, testing, and certification",
+        "Small entities and market effects"
+      ],
+      "hazardTags": [
+        "Unclear/Needs review"
+      ],
+      "hazardBasis": []
+    },
+    {
+      "id": "CPSC-2025-0009-0023",
+      "postedDate": "2025-08-14T04:00:00Z",
+      "title": "Comment from Iota Intel LLC",
+      "submitterName": null,
+      "organization": "Iota Intel LLC",
+      "submitterAvailability": "published",
+      "textAvailable": true,
+      "textStatus": "available",
+      "summary": "The cached record does not contain enough substantive text to determine the commenter’s request or concern.",
+      "excerpt": "See attached file(s)",
+      "sourceUrl": "https://www.regulations.gov/comment/CPSC-2025-0009-0023",
+      "detailRetrieved": true,
+      "detailStatus": null,
+      "themeTags": [
+        "Regulatory burden and cost"
+      ],
+      "hazardTags": [
+        "Unclear/Needs review"
+      ],
+      "hazardBasis": []
+    },
+    {
+      "id": "CPSC-2025-0009-0031",
+      "postedDate": "2025-08-14T04:00:00Z",
+      "title": "Comment from American Apparel & Footwear Association (AAFA)",
+      "submitterName": null,
+      "organization": "American Apparel & Footwear Association (AAFA)",
+      "submitterAvailability": "published",
+      "textAvailable": true,
+      "textStatus": "available",
+      "summary": "The cached record does not contain enough substantive text to determine the commenter’s request or concern.",
+      "excerpt": "Please see the attached file.",
+      "sourceUrl": "https://www.regulations.gov/comment/CPSC-2025-0009-0031",
+      "detailRetrieved": true,
+      "detailStatus": null,
+      "themeTags": [
+        "Regulatory burden and cost"
+      ],
+      "hazardTags": [
+        "Unclear/Needs review"
+      ],
+      "hazardBasis": []
+    },
+    {
+      "id": "CPSC-2025-0009-0019",
+      "postedDate": "2025-08-14T04:00:00Z",
+      "title": "Comment from Mitchell Scacchi",
+      "submitterName": "Mitchell Scacchi",
+      "organization": null,
+      "submitterAvailability": "published",
+      "textAvailable": true,
+      "textStatus": "available",
+      "summary": "The cached record does not contain enough substantive text to determine the commenter’s request or concern.",
+      "excerpt": "Please see attached file.",
+      "sourceUrl": "https://www.regulations.gov/comment/CPSC-2025-0009-0019",
+      "detailRetrieved": true,
+      "detailStatus": null,
+      "themeTags": [
+        "Regulatory burden and cost"
+      ],
+      "hazardTags": [
+        "Unclear/Needs review"
+      ],
+      "hazardBasis": []
+    },
+    {
+      "id": "CPSC-2025-0009-0027",
+      "postedDate": "2025-08-14T04:00:00Z",
+      "title": "Comment from Power Tool Institute",
+      "submitterName": null,
+      "organization": "Power Tool Institute",
+      "submitterAvailability": "published",
+      "textAvailable": true,
+      "textStatus": "available",
+      "summary": "The cached record does not contain enough substantive text to determine the commenter’s request or concern.",
+      "excerpt": "Please see the attached comments from the Power Tool Institute on the regulatory burdens associated with the CPSC&#39;s proposed safety standard on table saws.",
+      "sourceUrl": "https://www.regulations.gov/comment/CPSC-2025-0009-0027",
+      "detailRetrieved": true,
+      "detailStatus": null,
+      "themeTags": [
+        "Regulatory burden and cost",
+        "Consumer safety and risk",
+        "Compliance, testing, and certification"
+      ],
+      "hazardTags": [
+        "Unclear/Needs review"
+      ],
+      "hazardBasis": []
+    },
+    {
+      "id": "CPSC-2025-0009-0025",
+      "postedDate": "2025-08-14T04:00:00Z",
+      "title": "Comment from Anonymous",
+      "submitterName": null,
+      "organization": null,
+      "submitterAvailability": "unavailable_or_redacted",
+      "textAvailable": false,
+      "textStatus": "unavailable_from_official_detail",
+      "summary": "Comment text was not available in the retrieved official record.",
+      "excerpt": "Comment text was not available in the retrieved official record.",
+      "sourceUrl": "https://www.regulations.gov/comment/CPSC-2025-0009-0025",
+      "detailRetrieved": false,
+      "detailStatus": 429,
+      "themeTags": [
+        "Other / no theme match"
+      ],
+      "hazardTags": [
+        "Unclear/Needs review"
+      ],
+      "hazardBasis": []
+    },
+    {
+      "id": "CPSC-2025-0009-0018",
+      "postedDate": "2025-08-13T04:00:00Z",
+      "title": "Comment from Paul Sohler",
+      "submitterName": null,
+      "organization": null,
+      "submitterAvailability": "unavailable_or_redacted",
+      "textAvailable": false,
+      "textStatus": "unavailable_from_official_detail",
+      "summary": "Comment text was not available in the retrieved official record.",
+      "excerpt": "Comment text was not available in the retrieved official record.",
+      "sourceUrl": "https://www.regulations.gov/comment/CPSC-2025-0009-0018",
+      "detailRetrieved": false,
+      "detailStatus": 429,
+      "themeTags": [
+        "Other / no theme match"
+      ],
+      "hazardTags": [
+        "Unclear/Needs review"
+      ],
+      "hazardBasis": []
+    },
+    {
+      "id": "CPSC-2025-0009-0013",
+      "postedDate": "2025-08-13T04:00:00Z",
+      "title": "Comment from Outdoor Power Equipment Institute",
+      "submitterName": null,
+      "organization": "Outdoor Power Equipment Institute",
+      "submitterAvailability": "published",
+      "textAvailable": true,
+      "textStatus": "available",
+      "summary": "OPEI commends the CPSC for initiating this request for information towards reducing regulatory burden, and values our shared priority of consumer product safety.",
+      "excerpt": "OPEI commends the CPSC for initiating this request for information towards reducing regulatory burden, and values our shared priority of consumer product safety. In response, OPEI respectfully submits the attached comments highlighting potential reductions in regulatory burdens and costs. See attached file.",
+      "sourceUrl": "https://www.regulations.gov/comment/CPSC-2025-0009-0013",
+      "detailRetrieved": true,
+      "detailStatus": null,
+      "themeTags": [
+        "Regulatory burden and cost",
+        "Consumer safety and risk"
+      ],
+      "hazardTags": [
+        "Unclear/Needs review"
+      ],
+      "hazardBasis": []
+    },
+    {
+      "id": "CPSC-2025-0009-0010",
+      "postedDate": "2025-08-13T04:00:00Z",
+      "title": "Comment from Information Technology Industry Council (ITI)",
+      "submitterName": null,
+      "organization": null,
+      "submitterAvailability": "unavailable_or_redacted",
+      "textAvailable": false,
+      "textStatus": "unavailable_from_official_detail",
+      "summary": "Comment text was not available in the retrieved official record.",
+      "excerpt": "Comment text was not available in the retrieved official record.",
+      "sourceUrl": "https://www.regulations.gov/comment/CPSC-2025-0009-0010",
+      "detailRetrieved": false,
+      "detailStatus": 429,
+      "themeTags": [
+        "Innovation, competition, and consumer choice"
+      ],
+      "hazardTags": [
+        "Unclear/Needs review"
+      ],
+      "hazardBasis": []
+    },
+    {
+      "id": "CPSC-2025-0009-0012",
+      "postedDate": "2025-08-13T04:00:00Z",
+      "title": "Comment from Information Technology Industry Council (ITI)",
+      "submitterName": null,
+      "organization": null,
+      "submitterAvailability": "unavailable_or_redacted",
+      "textAvailable": false,
+      "textStatus": "unavailable_from_official_detail",
+      "summary": "Comment text was not available in the retrieved official record.",
+      "excerpt": "Comment text was not available in the retrieved official record.",
+      "sourceUrl": "https://www.regulations.gov/comment/CPSC-2025-0009-0012",
+      "detailRetrieved": false,
+      "detailStatus": 429,
+      "themeTags": [
+        "Innovation, competition, and consumer choice"
+      ],
+      "hazardTags": [
+        "Unclear/Needs review"
+      ],
+      "hazardBasis": []
+    },
+    {
+      "id": "CPSC-2025-0009-0015",
+      "postedDate": "2025-08-13T04:00:00Z",
+      "title": "Comment from National Waste and Recycling Association",
+      "submitterName": null,
+      "organization": "National Waste and Recycling Association",
+      "submitterAvailability": "published",
+      "textAvailable": true,
+      "textStatus": "available",
+      "summary": "The cached record does not contain enough substantive text to determine the commenter’s request or concern.",
+      "excerpt": "See attached comments from the National Waste and Recycling Association.",
+      "sourceUrl": "https://www.regulations.gov/comment/CPSC-2025-0009-0015",
+      "detailRetrieved": true,
+      "detailStatus": null,
+      "themeTags": [
+        "Regulatory burden and cost"
+      ],
+      "hazardTags": [
+        "Unclear/Needs review"
+      ],
+      "hazardBasis": []
+    },
+    {
+      "id": "CPSC-2025-0009-0017",
+      "postedDate": "2025-08-13T04:00:00Z",
+      "title": "Comment from Independent Lubricant Manufacturers Association (ILMA) and Petroleum Packaging Council (PPC).",
+      "submitterName": null,
+      "organization": "Independent Lubricant Manufacturers Association (ILMA) and Petroleum Packaging Council (PPC).",
+      "submitterAvailability": "published",
+      "textAvailable": true,
+      "textStatus": "available",
+      "summary": "Please find comments submitted by the Independent Lubricant Manufacturers Association (ILMA) and the Petroleum Packaging Council (PPC).",
+      "excerpt": "Please find comments submitted by the Independent Lubricant Manufacturers Association (ILMA) and the Petroleum Packaging Council (PPC).",
+      "sourceUrl": "https://www.regulations.gov/comment/CPSC-2025-0009-0017",
+      "detailRetrieved": true,
+      "detailStatus": null,
+      "themeTags": [
+        "Small entities and market effects"
+      ],
+      "hazardTags": [
+        "Unclear/Needs review"
+      ],
+      "hazardBasis": []
+    },
+    {
+      "id": "CPSC-2025-0009-0016",
+      "postedDate": "2025-08-13T04:00:00Z",
+      "title": "Comment from Fragrance Creators Association",
+      "submitterName": null,
+      "organization": null,
+      "submitterAvailability": "unavailable_or_redacted",
+      "textAvailable": false,
+      "textStatus": "unavailable_from_official_detail",
+      "summary": "Comment text was not available in the retrieved official record.",
+      "excerpt": "Comment text was not available in the retrieved official record.",
+      "sourceUrl": "https://www.regulations.gov/comment/CPSC-2025-0009-0016",
+      "detailRetrieved": false,
+      "detailStatus": 429,
+      "themeTags": [
+        "Other / no theme match"
+      ],
+      "hazardTags": [
+        "Unclear/Needs review"
+      ],
+      "hazardBasis": []
+    },
+    {
+      "id": "CPSC-2025-0009-0014",
+      "postedDate": "2025-08-13T04:00:00Z",
+      "title": "Comment from CPAC Foundation Center for Regulatory Freedom",
+      "submitterName": null,
+      "organization": "CPAC Foundation Center for Regulatory Freedom",
+      "submitterAvailability": "published",
+      "textAvailable": true,
+      "textStatus": "available",
+      "summary": "Attached are comments from the CPAC Foundation Center for Regulatory Freedom",
+      "excerpt": "Attached are comments from the CPAC Foundation Center for Regulatory Freedom",
+      "sourceUrl": "https://www.regulations.gov/comment/CPSC-2025-0009-0014",
+      "detailRetrieved": true,
+      "detailStatus": null,
+      "themeTags": [
+        "Regulatory burden and cost"
+      ],
+      "hazardTags": [
+        "Unclear/Needs review"
+      ],
+      "hazardBasis": []
+    },
+    {
+      "id": "CPSC-2025-0009-0011",
+      "postedDate": "2025-08-13T04:00:00Z",
+      "title": "Comment from Hyman, Phelps & McNamara, P.C.",
+      "submitterName": null,
+      "organization": null,
+      "submitterAvailability": "unavailable_or_redacted",
+      "textAvailable": false,
+      "textStatus": "unavailable_from_official_detail",
+      "summary": "Comment text was not available in the retrieved official record.",
+      "excerpt": "Comment text was not available in the retrieved official record.",
+      "sourceUrl": "https://www.regulations.gov/comment/CPSC-2025-0009-0011",
+      "detailRetrieved": false,
+      "detailStatus": 429,
+      "themeTags": [
+        "Other / no theme match"
+      ],
+      "hazardTags": [
+        "Unclear/Needs review"
+      ],
+      "hazardBasis": []
+    },
+    {
+      "id": "CPSC-2025-0009-0009",
+      "postedDate": "2025-08-13T04:00:00Z",
+      "title": "Comment from Mark Strauch",
+      "submitterName": null,
+      "organization": null,
+      "submitterAvailability": "unavailable_or_redacted",
+      "textAvailable": false,
+      "textStatus": "unavailable_from_official_detail",
+      "summary": "Comment text was not available in the retrieved official record.",
+      "excerpt": "Comment text was not available in the retrieved official record.",
+      "sourceUrl": "https://www.regulations.gov/comment/CPSC-2025-0009-0009",
+      "detailRetrieved": false,
+      "detailStatus": 429,
+      "themeTags": [
+        "Other / no theme match"
+      ],
+      "hazardTags": [
+        "Unclear/Needs review"
+      ],
+      "hazardBasis": []
+    },
+    {
+      "id": "CPSC-2025-0009-0007",
+      "postedDate": "2025-08-12T04:00:00Z",
+      "title": "Comment from National Retail Federation",
+      "submitterName": null,
+      "organization": null,
+      "submitterAvailability": "unavailable_or_redacted",
+      "textAvailable": false,
+      "textStatus": "unavailable_from_official_detail",
+      "summary": "Comment text was not available in the retrieved official record.",
+      "excerpt": "Comment text was not available in the retrieved official record.",
+      "sourceUrl": "https://www.regulations.gov/comment/CPSC-2025-0009-0007",
+      "detailRetrieved": false,
+      "detailStatus": 429,
+      "themeTags": [
+        "Other / no theme match"
+      ],
+      "hazardTags": [
+        "Unclear/Needs review"
+      ],
+      "hazardBasis": []
+    },
+    {
+      "id": "CPSC-2025-0009-0003",
+      "postedDate": "2025-08-12T04:00:00Z",
+      "title": "Comment from Air-Conditioning, Heating, and Refrigeration Institute (AHRI)",
+      "submitterName": null,
+      "organization": null,
+      "submitterAvailability": "unavailable_or_redacted",
+      "textAvailable": false,
+      "textStatus": "unavailable_from_official_detail",
+      "summary": "Comment text was not available in the retrieved official record.",
+      "excerpt": "Comment text was not available in the retrieved official record.",
+      "sourceUrl": "https://www.regulations.gov/comment/CPSC-2025-0009-0003",
+      "detailRetrieved": false,
+      "detailStatus": 429,
+      "themeTags": [
+        "Other / no theme match"
+      ],
+      "hazardTags": [
+        "Unclear/Needs review"
+      ],
+      "hazardBasis": []
+    },
+    {
+      "id": "CPSC-2025-0009-0005",
+      "postedDate": "2025-08-12T04:00:00Z",
+      "title": "Comment from The Toy Association",
+      "submitterName": null,
+      "organization": "The Toy Association",
+      "submitterAvailability": "published",
+      "textAvailable": true,
+      "textStatus": "available",
+      "summary": "The cached record does not contain enough substantive text to determine the commenter’s request or concern.",
+      "excerpt": "See attached file(s)",
+      "sourceUrl": "https://www.regulations.gov/comment/CPSC-2025-0009-0005",
+      "detailRetrieved": true,
+      "detailStatus": null,
+      "themeTags": [
+        "Regulatory burden and cost"
+      ],
+      "hazardTags": [
+        "Unclear/Needs review"
+      ],
+      "hazardBasis": []
+    },
+    {
+      "id": "CPSC-2025-0009-0008",
+      "postedDate": "2025-08-12T04:00:00Z",
+      "title": "Comment from Anonymous",
+      "submitterName": null,
+      "organization": null,
+      "submitterAvailability": "unavailable_or_redacted",
+      "textAvailable": false,
+      "textStatus": "unavailable_from_official_detail",
+      "summary": "Comment text was not available in the retrieved official record.",
+      "excerpt": "Comment text was not available in the retrieved official record.",
+      "sourceUrl": "https://www.regulations.gov/comment/CPSC-2025-0009-0008",
+      "detailRetrieved": false,
+      "detailStatus": 429,
+      "themeTags": [
+        "Other / no theme match"
+      ],
+      "hazardTags": [
+        "Unclear/Needs review"
+      ],
+      "hazardBasis": []
+    },
+    {
+      "id": "CPSC-2025-0009-0004",
+      "postedDate": "2025-08-12T04:00:00Z",
+      "title": "Comment from CTA",
+      "submitterName": null,
+      "organization": null,
+      "submitterAvailability": "unavailable_or_redacted",
+      "textAvailable": false,
+      "textStatus": "unavailable_from_official_detail",
+      "summary": "Comment text was not available in the retrieved official record.",
+      "excerpt": "Comment text was not available in the retrieved official record.",
+      "sourceUrl": "https://www.regulations.gov/comment/CPSC-2025-0009-0004",
+      "detailRetrieved": false,
+      "detailStatus": 429,
+      "themeTags": [
+        "Other / no theme match"
+      ],
+      "hazardTags": [
+        "Unclear/Needs review"
+      ],
+      "hazardBasis": []
+    },
+    {
+      "id": "CPSC-2025-0009-0006",
+      "postedDate": "2025-08-12T04:00:00Z",
+      "title": "Comment from Recreational Off-Highway Vehicle Association (ROHVA); Specialty Vehicle Institute of America (SVIA)",
+      "submitterName": null,
+      "organization": null,
+      "submitterAvailability": "unavailable_or_redacted",
+      "textAvailable": false,
+      "textStatus": "unavailable_from_official_detail",
+      "summary": "Comment text was not available in the retrieved official record.",
+      "excerpt": "Comment text was not available in the retrieved official record.",
+      "sourceUrl": "https://www.regulations.gov/comment/CPSC-2025-0009-0006",
+      "detailRetrieved": false,
+      "detailStatus": 429,
+      "themeTags": [
+        "Other / no theme match"
+      ],
+      "hazardTags": [
+        "Unclear/Needs review"
+      ],
+      "hazardBasis": []
+    },
+    {
+      "id": "CPSC-2025-0009-0002",
+      "postedDate": "2025-06-17T04:00:00Z",
+      "title": "Comment from Anonymous",
+      "submitterName": null,
+      "organization": null,
+      "submitterAvailability": "unavailable_or_redacted",
+      "textAvailable": false,
+      "textStatus": "unavailable_from_official_detail",
+      "summary": "Comment text was not available in the retrieved official record.",
+      "excerpt": "Comment text was not available in the retrieved official record.",
+      "sourceUrl": "https://www.regulations.gov/comment/CPSC-2025-0009-0002",
+      "detailRetrieved": false,
+      "detailStatus": 429,
+      "themeTags": [
+        "Other / no theme match"
+      ],
+      "hazardTags": [
+        "Unclear/Needs review"
+      ],
+      "hazardBasis": []
+    }
+  ],
+  "limitations": "Committed snapshot of 31 non-withdrawn official comments retrieved 2026-08-24T15:48:25.976Z. Attachments, private fields, and withdrawn comments are not analyzed. Tags require human review.",
+  "schemaVersion": 1,
+  "unclassifiedComments": 11,
+  "regrouping": {
+    "baselineUnclassifiedComments": 25,
+    "unclassifiedComments": 11,
+    "basis": "Cached official comment text plus the selected docket's stated regulatory-burden subject; records without usable official text remain unmatched."
+  }
+}

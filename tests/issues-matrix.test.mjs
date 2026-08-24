@@ -21,7 +21,10 @@ test("uses uncapped progressive detail batches before deriving aggregates",async
 
 test("normal matrix loading uses a durable cached snapshot",async()=>{
  const page=await readFile(new URL("app/page.tsx",root),"utf8");
+ const snapshot=JSON.parse(await readFile(new URL("public/data/cpsc-2025-0009-matrix.json",root),"utf8"));
  assert.match(page,/cpsc-issues-matrix-v2:/);
+ assert.match(page,/\/data\/cpsc-2025-0009-matrix\.json/);
+ assert.match(page,/cache:"force-cache"/);
  assert.match(page,/localStorage\.getItem/);
  assert.match(page,/localStorage\.setItem\(cacheKey/);
  assert.match(page,/normalizeCachedMatrix/);
@@ -29,6 +32,13 @@ test("normal matrix loading uses a durable cached snapshot",async()=>{
  assert.match(page,/setData\(rollupMatrix\(listing,comments\)\)/);
  assert.match(page,/replacements=new Map/);
  assert.match(page,/catch\{emitAudit\("comment_matrix\.cache_unavailable/);
+ assert.equal(snapshot.comments.length,31);
+ assert.equal(snapshot.regrouping.baselineUnclassifiedComments,25);
+ assert.equal(snapshot.regrouping.unclassifiedComments,11);
+ assert.equal(snapshot.unclassifiedTextComments,0);
+ assert.equal(snapshot.themes.at(-1).theme,"Other / no theme match");
+ assert.ok(snapshot.comments.every(comment=>Array.isArray(comment.hazardTags)&&comment.hazardTags.length>0));
+ assert.ok(snapshot.comments.every(comment=>comment.sourceUrl.startsWith("https://www.regulations.gov/comment/")));
 });
 
 test("groups comments under issue headings with comment-level summaries, hazards, and source links",async()=>{
@@ -40,6 +50,12 @@ test("groups comments under issue headings with comment-level summaries, hazards
  assert.match(page,/<b>Summary:<\/b>/);
  assert.match(page,/className="comment-hazards"/);
  assert.match(page,/i<c\.hazardTags\.length-1&&<b>,<\/b>/);
+ assert.match(page,/\.\.\.c,themeTags:classifyCachedComment\(c,docketContext\),summary:summarizeCachedComment\(c\)/);
+ assert.doesNotMatch(page,/hazardTags:classifyCachedComment/);
+ assert.match(page,/issueGroupSummary\(group\.theme\)/);
+ assert.match(page,/<span>Comments<\/span>/);
+ assert.match(page,/<span>Retrieved<\/span>/);
+ assert.doesNotMatch(page,/<span>Algorithm<\/span>|<span>Accessible text<\/span>|<span>Detail retrieval<\/span>|<span>Matrix rows<\/span>/);
 });
 
 test("provides a real PowerPoint download from the corrected matrix",async()=>{
