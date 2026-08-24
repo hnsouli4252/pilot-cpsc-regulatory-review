@@ -4,13 +4,22 @@ import test from "node:test";
 
 const root=new URL("../",import.meta.url);
 
-test("retains official comments before deriving issue and hazard aggregates",async()=>{
+test("uses uncapped progressive detail batches before deriving aggregates",async()=>{
  const api=await readFile(new URL("app/api/analyze/route.ts",root),"utf8");
  assert.match(api,/LISTING_PAGE_SIZE=250/);
- assert.match(api,/comments=nonWithdrawn\.map/);
+ assert.match(api,/batch=nonWithdrawn\.slice\(detailOffset,detailOffset\+detailBatchSize\)/);
+ assert.match(api,/hasMore=nextOffset<nonWithdrawn\.length/);
  assert.match(api,/Other \/ no theme match/);
  assert.match(api,/domainAggregation=/);
- assert.doesNotMatch(api,/slice\(0,MAX_COMMENT_DETAILS\)/);
+ assert.doesNotMatch(api,/MAX_DETAIL_REQUESTS|MAX_COMMENT_DETAILS/);
+});
+
+test("normal matrix loading uses a durable cached snapshot",async()=>{
+ const page=await readFile(new URL("app/page.tsx",root),"utf8");
+ assert.match(page,/cpsc-issues-matrix-v2:/);
+ assert.match(page,/localStorage\.getItem/);
+ assert.match(page,/localStorage\.setItem\(cacheKey/);
+ assert.match(page,/while\(base\?\.hasMore\)/);
 });
 
 test("provides a real PowerPoint download from the corrected matrix",async()=>{
