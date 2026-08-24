@@ -41,6 +41,18 @@ test("normal matrix loading uses a durable cached snapshot",async()=>{
  assert.ok(snapshot.comments.every(comment=>comment.sourceUrl.startsWith("https://www.regulations.gov/comment/")));
 });
 
+test("normal submissions loading uses the same snapshot and reserves the API for refresh",async()=>{
+ const page=await readFile(new URL("app/page.tsx",root),"utf8");
+ assert.match(page,/const loadSnapshot=async\(page=1\)=>/);
+ assert.match(page,/MATRIX_SNAPSHOT_PATHS\[record\.docketId\]/);
+ assert.match(page,/useEffect\(\(\)=>\{setData\(null\);setError\(""\);if\(record\?\.docketId\)loadSnapshot\(1\)/);
+ assert.match(page,/Opened from the saved project snapshot; no live API request was made/);
+ assert.match(page,/>Refresh from the official source</);
+ assert.match(page,/snapshot\.comments\.slice/);
+ assert.match(page,/url:comment\.sourceUrl/);
+ assert.doesNotMatch(page,/useEffect\(\(\)=>\{setData\(null\);setError\(""\);if\(record\?\.docketId\)load\(1\)/);
+});
+
 test("groups comments under issue headings with comment-level summaries, hazards, and source links",async()=>{
  const page=await readFile(new URL("app/page.tsx",root),"utf8");
  assert.match(page,/className="issue-groups"/);
